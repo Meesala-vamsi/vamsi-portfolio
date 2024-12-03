@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meesala Vamsi - Portfolio Tailwindcss</title>
+        <link rel="icon" href="dist/img/profile.jpeg">
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style type="text/tailwindcss">
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .hamburger-line {
+                @apply w-[18px] h-[2px] my-1 block bg-dark;
+            }
+
+            .hamburger-active > span:nth-child(1) {
+                @apply rotate-45;
+            }
+
+            .hamburger-active > span:nth-child(2) {
+                @apply scale-0;
+            }
+
+            .hamburger-active > span:nth-child(3) {
+                @apply -rotate-45;
+            }
+
+        </style>
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Text Color -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: '16px', 
+                    },
+                    extend: {
+                        colors: {
+                            primary: '#2563EB',
+                            dark: '#0f172a',
+                            secondary: '#64748b',
+                        },
+                        screens: {
+                            '2xl': '1230px',
+                        }
+                    }  
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="bg-transparent fixed bg-white drop-shadow-sm top-0 left-0 w-full flex items-center z-10">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                        <a href="#home" class="font-bold text-lg text-primary block py-6 tracking-wide">Meesala Vamsi</a>
+                    </div>
+                    <div class="flex items-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+
+                        <!-- Navbar -->
+                        <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-sm rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none">
+                            <ul class="block lg:flex">
+                                <li class="group">
+                                    <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex" href="#home">Home page</a>
+                                </li>
+                                <li class="group">
+                                    <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex" href="#about">About me</a>
+                                </li>
+                                <li class="group">
+                                    <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="group">
+                                    <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex" href="#Contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- /Navbar -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- Home -->
+        <section id="home" class="pt-36">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="w-full self-center px-4 lg:w-1/2">
+                        <h1 class="text-base font-medium text-primary">Hello everyone 👋, I am <span class="block font-bold text-dark text-3xl mt-1 lg:text-4xl">Meesala Vamsi</span></h1>
+                        <h2 class="font-medium text-slate-500 text-lg mb-5 mt-3">Junior Developer</h2>
+                        <p class="font-normal text-secondary mb-10 leading-relaxed">A junior developer. I specialize in UI design, responsive web design, and visual development.</p>
+                        <a href="#Contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">Contact me</a>
+                    </div>
+                    <div class="w-full self-end px-4 lg:w-1/2">
+                        <div class="mt-10 lg:mt-8 lg:right-0">
+                            <img src="dist/img/profile.jpeg" alt="Meesala Vamsi" class="max-w-full mx-auto w-96">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Home -->
+
+        <!-- About -->
+        <section id="about" class="pt-36 pb-32">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-5 lg:w-1/2">
+                        <h4 class="text-base font-medium text-primary mb-2">About me</h4>
+                        <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Junior Developer</h2>
+                        <p class="font-normal text-secondary mb-5 leading-relaxed max-w-xl">I recently graduated with a B.Tech degree from Dr. MGR Educational and Research Institute, Tamil Nadu, Chennai. Before that, I completed my intermediate studies at Narayana Junior College and my 10th grade at St. Alphonsus Liguori E.M. High School. I am skilled in HTML, CSS, JavaScript, ReactJS, Node.js, MongoDB, Express, and SQL. During my journey, I also had the opportunity to work as an intern on the project TheResume.io, which enhanced my practical knowledge and collaborative skills.</p>
+                    </div>
+                    <!-- <div class="w-full px-4 lg:w-1/2">
+                        <h3 class="font-bold text-dark text-xl lg:text-2xl mb-5 lg:pt-8">Mari berteman</h3>
+                        <p class="font-normal text-secondary mb-4 leading-relaxed">Temukan saya di berbagai sosial media, jangan lupa untuk follow dan subscribe chanel Youtube saya juga ya hehe.</p>
+                        <div class="flex items-center">
+                            
+                            <a href="https://www.youtube.com/@ilmaelfiraa" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-youtube fill-current text-2xl'></i>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/in/ilmaelfiraa/" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/ilmaelfiraa.ui/" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                            </a>
+                            
+                            <a href="https://github.com/ilmaelfiraa" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-github fill-current text-2xl'></i>
+                            </a>
+                            
+                            <a href="https://dribbble.com/ilmaelfiraa" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-dribbble fill-current text-2xl'></i>
+                            </a>
+                            
+                            <a href="https://www.figma.com/@ilmaelfiraa" target="_blank" class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                                <i class='bx bxl-figma fill-current text-2xl'></i>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- /About -->
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="max-w-xl mx-auto text-center mb-16">
+                        <h4 class="text-base font-medium text-primary mb-2">Portfolio</h4>
+                        <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Latest Projects</h2>
+                        <p class="font-normal text-secondary leading-relaxed">Here are some of the recent projects I have worked on, including personal projects I have worked on myself.</p>
+                    </div>
+                </div>
+                <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                    <div class="mb-8 p-4 md:w-1/2">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/1.png" class="w-full" alt="portfolio lookscount Meesala Vamsi">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">E-Commerce Application</h3>
+                        <p class="font-normal text-secondary leading-relaxed">A full-stack MERN stack application designed to provide an intuitive shopping experience for users.
+Frontend: Built a responsive and interactive user interface using ReactJS, with React Redux for efficient state management across components.
+Backend: Developed a RESTful API using Node.js and Express, ensuring secure and seamless communication between the server and the client.
+Database: Used MongoDB to store product details, user information, and order history.
+Payment Gateway: Integrated PayPal to facilitate smooth and secure online transactions.
+Key Features: User authentication, shopping cart management, and order tracking. <a href="https://vamsi-ecomm-1.onrender.com/" class="text-primary underline" target="_blank">Live preview</a></p>
+                    </div>
+                    <div class="mb-8 p-4 md:w-1/2">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/2.png" class="w-full" alt="portfolio kejoo Meesala Vamsi">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Food Delivery Application</h3>
+                        <p class="font-normal text-secondary leading-relaxed">This website is just an overview of a food delivery website like we can order a food in this website and also we can make an online payment using stripe and also performed a secure authentication like signup and login options.
+Frontend: Built using ReactJS, ensuring a clean and user-friendly design.
+Backend: Utilized Node.js and Express to handle server-side operations like order management and user authentication.
+Database: Implemented MongoDB to manage user data, and order details.
+Payment Gateway: Incorporated Stripe for secure and hassle-free payment processing.<a href="https://master--mernfood.netlify.app" class="text-primary underline" target="_blank">Live preview</a></p>
+                    </div>
+                    <div class="mb-8 p-4 md:w-1/2">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/3.png" class="w-full" alt="portfolio dodecia Meesala Vamsi">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8"> YouTube Clone</h3>
+                        <p class="font-normal text-secondary leading-relaxed">Frontend:
+Built a sleek and responsive user interface using ReactJS.
+Leveraged React Router for smooth navigation across pages like Home, Search, Video Details, and Channel Details.
+Incorporated modern UI design principles to enhance usability and create an engaging user experience.
+Backend and Data:
+Utilized APIs from RapidAPI.com to fetch dynamic and up-to-date video data, including video titles, thumbnails, channel details, and comments.
+Integrated API endpoints for searching videos, fetching trending content. <a href="https://meesala-youtubeclone.netlify.app" class="text-primary underline" target="_blank">Live preview</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /Portfolio -->
+
+        <!-- Contact -->
+        <section id="Contact" class="pt-36 pb-32">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="max-w-xl mb-16">
+                        <h4 class="text-base font-medium text-primary mb-2">Contact</h4>
+                        <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Contact me</h2>
+                        <p class="font-normal text-secondary mb-10 leading-relaxed">For collaboration,job offerings please fill out the message form below.</p>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="w-full lg:w-2/3">
+                        <div class="w-full px-4 mb-8">
+                            <input type="text" id="nama" placeholder="Company Name" class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                        </div>
+                        <div class="w-full px-4 mb-8">
+                            <input type="email" id="email" placeholder="Job role" class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                        </div>
+                        <div class="w-full px-4 mb-12">
+                            <textarea type="text" id="pesam" placeholder="Write a message" class="text-base border-b w-full text-dark pb-3 h-32 focus:outline-none focus:border-primary"></textarea>
+                        </div>
+                        <div class="px-4">
+                            <a href="#Contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">Contact me</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /Contact -->
+
+        <!-- Footer -->
+        <footer class="bg-dark pt-24 pb-12">
+            <div class="container">
+                <!-- <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                        <h2 class="font-bold text-4xl text-white mb-5">Meesala Vamsi</h2>
+                        <h3 class="font-bold text-2xl mb-2">Hubungi saya</h3>
+                        <p>elfiranurul02@gmail.com</p>
+                        <p>Jl. H. Ilyas, Air putih</p>
+                        <p>Bengkalis - Riau</p>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Kategori tulisan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Programming</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Teknologi</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Gaya hidup</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Beranda</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Tentang saya</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="w-full pt-4">
+                    <div class="flex items-center justify-center mb-5">
+                        <!-- Youtube -->
+                        <a href="https://www.youtube.com" target="_blank" class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-youtube fill-current text-2xl'></i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/" target="_blank" class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com" target="_blank" class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                        </a>
+                        <!-- Github -->
+                        <a href="https://github.com/" target="_blank" class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-github fill-current text-2xl'></i>
+                        </a>
+                        <!-- Figma -->
+                        <a href="https://www.figma.com/" target="_blank" class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-figma fill-current text-2xl'></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-500 text-sm text-center">Made by <a href="#" class="text-primary font-medium">Meesala Vamsi</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+
+        <script src="dist/js/script.js"></script>
+    </body>
+</html>
